@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Homepage</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .division {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px 20px;
+      }
+      .navbar img {
+        height: 30px;
+        border-radius: 100px;
+        border: 1px solid black;
+        margin: 0px 5px;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgb(177, 168, 168);
+        border-radius: 30px;
+        width: 40%;
+        margin: auto;
+        padding: 3px 15px;
+      }
+      .search:hover {
+        box-shadow: 1px 1px 1px 1px rgb(143, 137, 137);
+      }
+      .icon {
+        height: 30px;
+      }
+
+      .mic {
+        height: 30px;
+      }
+
+      .search input {
+        width: 100%;
+        padding: 10px 10px;
+        border: none;
+        box-shadow: none;
+      }
+      input {
+        border: none;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+      }
+
+      p {
+        margin: 5px;
+      }
+      nav p:hover {
+        text-decoration: underline;
+      }
+
+      .last {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .para {
+        margin-top: 30px;
+        padding: 5px 10px;
+        background-color: rgb(245, 237, 237);
+      }
+      .para:hover {
+        border: 1px solid rgb(99, 89, 89);
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        margin: 0px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <p><a href=""> Gmail</a></p>
+      <p><a href=""> Images</a></p>
+
+      <img src="./images/user.png" alt="" />
+    </nav>
+    <div class="division">
+      <ul>
+        <li class="lists list">
+          <img src="./images/google.png" alt="Google" />
+          <div class="search">
+            <img src="./images/search.png" alt="" class="icon" />
+            <input type="text" name="text" id="" class="text" />
+            <img src="./images/mic.png" alt="" class="mic" />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="last">
+      <p class="para"><a href=""> Google Search</a></p>
+      <p class="para"><a href=""> I'm Feeling Lucky</a></p>
+    </div>
+  </body>
+</html>
