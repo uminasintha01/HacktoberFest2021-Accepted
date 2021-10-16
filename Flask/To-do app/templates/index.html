@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+</head>
+<body>
+    <form action="/" method="POST" style="text-align: center;">
+        <input type="text" name="title" placeholder="Note Title" autocomplete="off">
+        <input type="text" name="content" placeholder="Note Content" autocomplete="off">
+        <button type="submit">Add Note</button>
+    </form>
+
+    {% if allNotes|length==0  %}
+    <h2 style="text-align: center; font-family: monospace;">No Note Exists</h2>
+    {% else %}
+        {% for note in allNotes %}
+        <div style="padding: 1rem; border-radius: 10px; border: 2px solid black; width: fit-content; margin: auto; margin-top: 1rem;">
+            <p style="font-family: monospace;">
+                S. No. - {{loop.index}}
+                <br>
+                Title - {{note.title}}
+                <br>
+                Content - {{note.content}}
+                <br>
+                Created - {{note.date}}
+            </p>
+            <a href='/update/{{note.sno}}' type="button" style="padding: 0.2rem; border: 1px solid black; background-color: rgb(48, 47, 47); color: white; text-decoration: none;">Update</a>
+            <br>
+            <br>
+            <a href='/delete/{{note.sno}}' type="button" style="padding: 0.2rem; border: 1px solid black; background-color: rgb(48, 47, 47); color: white; text-decoration: none;" >Delete</a>
+        </div>
+        {% endfor %}
+    {% endif %}
+    
+</body>
+</html>
