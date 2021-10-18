@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int i,j;
+    char s='W';
+    for(i=1;i<=7;i++)
+    {
+        if(i<=4)
+        {
+            for(j=1;j<=4-i;j++)
+                printf(" ");
+            for(j=1,s='W';j<=i;j++,s++)
+                printf("%c ",s);
+            printf("\n");
+        }
+        else
+        {
+            for(j=1;j<=i-4;j++)
+                printf(" ");
+            for(j=1,s='W';j<=8-i;j++,s++)
+                printf("%c ",s);
+            printf("\n");
+        }
+    }
+    getch();
+}
