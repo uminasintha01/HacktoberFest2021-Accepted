@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<stdlib.h>
+int ncr(int,int);
+int fact(int);
+void main()
+{
+    int r,i,j;
+    printf("Enter the number of rows: \n");
+    scanf("%d",&r);
+    for(i=0;i<r;i++)
+    {
+        for(j=1;j<=r-i-1;j++)
+            printf(" ");
+        for(j=0;j<=i;j++)
+            printf("%d ",ncr(i,j));
+       printf("\n");
+    }
+    getch();
+}
+int ncr(int n,int r)
+{
+    return fact(n)/(fact(n-r)*fact(r));
+}
+int fact(int n)
+{
+   if(n==1||n==0)
+    return 1;
+   else
+    return n*fact(n-1);
+}
